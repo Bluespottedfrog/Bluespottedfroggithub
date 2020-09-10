@@ -1,0 +1,34 @@
+function animateLogo(){
+  var logoSide = document.querySelector(".circle-1");
+  var c1v = 0 , c2v = 0 , c3v = 0 , c4v = 0;
+  var id = setInterval(frame, 10);
+  var c1,c2,c3,c4;
+  var rotation = 0;
+  var pn = new Perlin(1);
+
+  function frame(){
+    c1v += -0.01;
+    c2v += 0.02;
+    c3v += 0.015;
+    c4v += -0.01;
+
+    c1 = 50 - (5 * Math.sin(c1v));
+    c2 = 50 + (5 * Math.sin(c2v));
+    c3 = 50 - (5 * Math.sin(c3v));
+    c4 = 50 + (5 * Math.sin(c4v));
+
+    console.log("noise value for x: " +  pn.noise(c1, 0, 0));
+
+    c1 += 10 * (2 * (0.25 - pn.noise(c1, 0, 0)));
+    c2 += 10 * (2 * (0.25 - pn.noise(c2, 0, 0)));
+    c3 += 10 * (2 * (0.25 - pn.noise(c3, 0, 0)));
+    c4 += 10 * (2 * (0.25 - pn.noise(c4, 0, 0)));
+
+    rotation += 0.1;
+
+    logoSide.style.borderRadius = "50% 50% 50% 50% / " +
+    c1 + "% " + c2 + "% " + c3 + "% " + c4 + "%";
+    logoSide.style.transform = "rotate(" + rotation + "deg)";
+
+  }
+}
