@@ -5,64 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
   <script src="https://use.fontawesome.com/e41ebd9c71.js"></script>
 
-  <title>Wander | Home</title>
-
+  <title>Thomas Tran | Home</title>
+  <script src="three.min.js"></script>
+  <script src="postprocessing.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="src/anime.min.js"></script>
+  <script src="src/cloudGenerate.js"></script>
+  <script src="src/logo.js"></script>
 
 </head>
 
-<body>
-
-  <div class="wrapper"> <!-- WRAPPER -->
-
-    <div class="navbar"> <!-- NAVBAR -->
-        <div class="innerNavbar">
-          <a href="index.html"> Home </a>
-          <a href="script.html"> Script </a>
-          <a href="concept.html"> Concepts </a>
-          <a href="storyboard.html"> Storyboard</a>
-          <a href="animatic.html"> Animatic </a>
-          <a href="index.html"> Final </a>
-        </div>
-    </div>   <!-- ./NAVBAR -->
-
-    <div class="container hero"> <!-- HERO PAGE -->
-
-        <div class="heroTitle">
-            <img class="heroImage" src="res/img/Concept.png"></img>
-        </div>
-
-        <div class="heroTitle">
-          <h1 class="ml6">
-            <span class="text-wrapper">
-              <span class="letters"> W A N D E R </span>
-            </span>
-          </h1>
-          <a href="#summary" class="button">
-            <h3>More</h3>
-          </a>
-
-        </div>
-
-    </div> <!-- ./ HERO PAGE -->
-
-    <div id="summary" class="container">
-      <div class="textWrapper">
-        <h1> S U M M A R Y </h1>
-        <p>
-A little GIRL and her MOTHER visit the tombstone. As the little GIRL is mourning, she is visited by a friendly ghost who lives at the cemetery.
-        </p>
-      </div>
-
-    </div>
-
+<body onload="letterAnimation('ml3');">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="container loadContainer"> <!-- WRAPPER -->
+    <div class="logoWrapper"> <!-- LOGO WRAPPER -->
+      <div class="circle-1"></div>
+      <div class="circle-1"></div>
+      <h1>T</h1>
+    </div> <!-- ./LOGO WRAPPER -->
   </div> <!-- ./WRAPPER -->
 
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="script2.js"></script>
+<div class="navbar">
+  <div class="innerNavbar">
+    <a class="logo" href="">
+      <div class="logoWrapper"> <!-- LOGO WRAPPER -->
+        <div class="circle-2"></div>
+        <div class="circle-2"></div>
+        <h1 style="font-size: 25px;">T</h1>
+      </div> <!-- ./LOGO WRAPPER -->
+    </a>
+    <a><h4>About</h4></a>
+    <a><h4>Contact</h5></a>
+  </div>
+</div>
+
+<script>
+  animateLogo(".circle-1");
+  $(window).on("load", function(){
+    $(".loadContainer").fadeOut("slow");
+  });
+  animateLogo(".circle-2");
+</script>
+
+<div id="main" class="scroll-container">
+<section>
+  <div class="wrapper"> <!-- WRAPPER -->
+    <div>
+        <script>
+          init();
+        </script>
+    </div>
+
+    <div class="hero"></div>
+
+    <div class="title">
+      <div class="container name">
+        <h1 class="myName ml3">Thomas Tran</h1>
+        <h2>Website Work In Progress</h2>
+      </div>
+
+      <div class="container seeMyWork">
+        <a class="downContainer">
+          <h3>see my work</h3>
+          <div class="downIndicator">
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+</div> <!-- ./WRAPPER -->
+<section>
+
+
+<section>
+  <div class="container project project-1" id="firstProject"> <!-- PROJECT 1 -->
+    <div class="contentWrapper">
+      <div class="content">
+        <div class="imgBox">
+          <img src="assets/img/xDeviatedTitle.png">
+          <img src="assets/img/xDeviatedEvents.png">
+          <img src="assets/img/xDeviatedTitle.png">
+        </div>
+      </div>
+
+      <a class="button">
+        <div class="pointer"></div>
+        <h3>Learn More</h3>
+      </a>
+
+      <div class="contentTitle">
+        <h1 class="p1">xDeviated</h1>
+        <h1 class="p1-2">Life</h1>
+        <h2>- Nightlife entertainment</h2>
+      </div>
+
+      </div>
+
+  </div> <!-- ./PROJECT 1 -->
+</section>
+
+<section>
+<div class="container project"> <!-- PROJECT 2 -->
+    <div class="content">
+      <div class="imgBox">
+        <img src="assets/img/xDeviatedTitle.png">
+        <img src="assets/img/xDeviatedEvents.png">
+        <img src="assets/img/xDeviatedTitle.png">
+      </div>
+    </div>
+
+    <div class="contentTitle">
+      <h1>xDeviated <br>Life</br></h1>
+      <h2>- Nightlife entertainment</h2>
+    </div>
+
+</div> <!-- ./PROJECT 2 -->
+</section>
+
+</div>
+<!-- SOURCES -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="src/hover.js"></script>
+<script>
+  Array.from(document.querySelectorAll('.imgBox')).forEach((e) =>{
+    const imgs = Array.from(e.querySelectorAll('img'));
+    var myAnimation = new hoverEffect({
+        parent: e,
+        intensity: 0.3,
+        image1: imgs[0].getAttribute('src'),
+        image2: imgs[1].getAttribute('src'),
+        displacementImage: 'assets/img/heightMap.png'
+    });
+  })
+</script>
+
+<script src="src/full-page-scroll.min.js"></script>
+<script type="text/javascript">
+  new fullScroll({
+    mainElement: "main",
+    displayDots: true,
+    dotsPosition: "left",
+    animateTime: 0.7,
+    animateFunction: "ease",
+  });
+</script>
+<!-- ./SOURCES -->
+<script src="src/main.js"></script>
+<script src="src/scriptLoad.js"></script>
 </body>
+</html>
